@@ -3,7 +3,7 @@ body
   min-width: 230px;
   margin: 0px;
   font-family: Segoe UI, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   color: #4c4c4c;
   background-color: #fff;
 }
@@ -189,12 +189,16 @@ li li
 
 .menu-item
 {
-  padding: 14px 0px 14px 10px;
+  padding: 11px 0px 11px 10px;
 }
 
 .menu-item:hover
 {
-  background-color: #ece7df;
+  color: #009dff;
+}
+
+.menu-item:hover .icon{
+  background-position: -15px 0;
 }
 
 .icon
@@ -203,6 +207,7 @@ li li
   width: 15px;
   height: 15px;
   margin-right: 20px;
+  margin-top: 5px;
   vertical-align: top;
   background-image: url(popup.png);
   background-repeat: no-repeat;
@@ -245,38 +250,77 @@ body.disabled #enabled #enabled-no
 #clickhide .icon,
 #clickhide-cancel .icon
 {
-  background-position: -50px -33px;
+  background-image: url(popup/element.png);
+  /*background-position: -50px -33px;*/
+}
+
+#clickhide-cancel{
+  width: 144px;
+  margin: 0 auto;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #b3b3b3;
+  border-radius: 4px;
+  text-align: center;
 }
 
 #clickhide-instructions
 {
-  margin: 10px 15px;
+  margin: 43px 0;
+  font-size: 14px;
 }
 
 #stats-container .icon
 {
   background-image: url(popup/stat.png);
-  background-position: 0 0;
 }
 
+#options .icon
+{
+  background-image: url(popup/option.png);
+}
 
+#feedback .icon
+{
+  background-image: url(popup/feedback.png);
+}
+
+#stats{
+  color: #808080;
+  font-size: 14px;
+  margin-left: 0;
+}
 #stats strong
 {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 140%;
+  color: #009dff;
+}
+#stats li{
+  padding: 0;
+}
+#stats-page, #stats-total{
+  padding: 11px 0 11px 10px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 #share
 {
-  margin-top: 5px;
-  font-size: 12px;
-  color: #949494;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+#share span{
+  display: block;
+  line-height: 50px;
+  text-align: center;
 }
 
 #share-box
 {
-  margin-top: 5px;
-  margin-left: -3px;
+
 }
 
 #share-box div[data-social]
@@ -287,7 +331,7 @@ body.disabled #enabled #enabled-no
   height: 32px;
   margin: 3px 10px 3px 3px;
   border-radius: 3px;
-  background-image: url(popup.png);
+  background-size: 32px 32px;
 }
 
 #share-box div[data-social]:hover
@@ -298,17 +342,23 @@ body.disabled #enabled #enabled-no
 
 #share-box div[data-social="facebook"]
 {
-  background-position: -1px -1px;
+  background-image: url(popup/weibo.png);
 }
 
 #share-box div[data-social="twitter"]
 {
-  background-position: -1px -34px;
+  background-image: url(popup/qq.png);
 }
 
 #share-box div[data-social="gplus"]
 {
-  background-position: -1px -67px;
+  background-image: url(popup/weixin.png);
+}
+
+#stats li#share-number{
+  border-top: none;
+  font-size: 12px;
+  padding: 8px 10px;
 }
 
 .collapse
@@ -327,7 +377,7 @@ body.disabled #enabled #enabled-no
 {
   display: inline-block;
   position: absolute;
-  top: 13px;
+  top: 18px;
   right: 10px;
   width: 11px;
   height: 11px;

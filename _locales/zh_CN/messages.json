@@ -278,7 +278,7 @@
     "message": "在开发者工具中显示 Adblock Plus 面板"
   },
   "stats_label_page": {
-    "message": "<strong>$number$</strong> 在此页上",
+    "message": "此页上已拦截 <strong>$number$</strong> 次",
     "placeholders": {
       "number": {
         "content": "$1"
@@ -286,7 +286,7 @@
     }
   },
   "stats_label_total": {
-    "message": "总计 <strong>$number$</strong> 条",
+    "message": "总计拦截 <strong>$number$</strong> 次",
     "placeholders": {
       "number": {
         "content": "$1"
@@ -313,7 +313,7 @@
     }
   },
   "stats_share_title": {
-    "message": "分享屏蔽广告总数"
+    "message": "分享至社交平台"
   },
   "stats_show_iconnumber": {
     "message": "在图标上显示数量"
