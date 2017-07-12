@@ -565,6 +565,8 @@
 
   chrome.webRequest.onBeforeRequest.addListener(details =>
   {
+    console.log('chrome request')
+    return;
     // The high-level code isn't interested in requests that aren't
     // related to a tab or requests loading a top-level document,
     // those should never be blocked.
@@ -598,6 +600,8 @@
       frame = ext.getFrame(details.tabId, frameId);
       page = new Page({id: details.tabId});
     }
+
+    console.log(ext.webRequest)
 
     if (ext.webRequest.onBeforeRequest._dispatch(
         url, type, page, frame).includes(false))
@@ -638,7 +642,6 @@
       message, sender, sendResponse
     ).indexOf(true) != -1;
   });
-
 
   /* Storage */
 
