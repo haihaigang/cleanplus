@@ -603,11 +603,15 @@
 
     let filterResults = ext.webRequest.onBeforeRequest._dispatch(url, type, page, frame);
 
-    for(let res of filterResults){
-      if(res.type == 2){
-        return {redirect_url: res.redirectUrl}
-      }else if(res.type == 1){
-        return {cancel: true}
+    for(let res of filterResults)
+    {
+      if (res.type == 2)
+      {
+        return {redirect_url: res.redirectUrl};
+      }
+      else if (res.type == 1)
+      {
+        return {cancel: true};
       }
     }
 
