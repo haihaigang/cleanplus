@@ -601,12 +601,19 @@
       page = new Page({id: details.tabId});
     }
 
-    console.log(ext.webRequest)
-    // return {cancel: false};
+    let filterResults = ext.webRequest.onBeforeRequest._dispatch(url, type, page, frame);
 
-    if (ext.webRequest.onBeforeRequest._dispatch(
-        url, type, page, frame).includes(false))
-      return {cancel: true};
+    for(let res of filterResults){
+      if(res.type == 2){
+        return {redirect_url: res.redirectUrl}
+      }else if(res.type == 1){
+        return {cancel: true}
+      }
+    }
+
+    // if (ext.webRequest.onBeforeRequest._dispatch(
+    //     url, type, page, frame).includes(0))
+    //   return {cancel: true};
   }, {urls: ["<all_urls>"]}, ["blocking"]);
 
 
