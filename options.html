@@ -34,6 +34,7 @@ body
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   padding: 20px;
+  min-width: 700px;
 }
 
 td
@@ -130,163 +131,227 @@ button
   box-shadow: 0px 0px 10px #e03030;
 }
 
+#adsafe
+{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.adsafe-header img{
+  display: block;
+}
+
+.ui-tabs-vertical 
+{ 
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+.ui-tabs-vertical .ui-tabs-nav 
+{
+  padding: 0;
+  border: none;
+  float: left; 
+  width: 20%;
+}
+.ui-tabs-vertical .ui-tabs-nav li 
+{
+  clear: left;
+  width: 100%;
+  border-bottom-width: 1px !important;
+  margin: 0;
+  border-color: #e6e6e6;
+  border-radius: 0;
+  background: none;
+  background-color: #fff;
+  line-height: 70px;
+  color: #999;
+}
+.ui-tabs-vertical .ui-tabs-nav li a
+{
+  display:block;
+  color: #999;
+}
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active 
+{
+  padding-bottom: 0;
+  padding-right: .1em;
+  border-right-width: 1px; 
+}
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a
+{
+  color: #0089ff;
+}
+.ui-tabs-vertical .ui-tabs-panel 
+{ 
+  padding: 0; 
+  float: right; 
+  width: 80%;
+}
+
 </style>
 </head>
 <body>
-<table>
-  <tr>
-    <td style="padding-right: 8px; vertical-align: middle;">
-      <img src="icons/detailed/abp-32.png" srcset="icons/detailed/abp-64.png 2x">
-    </td>
-    <td>
-      <h1><span class="i18n_options"></span></h1>
-    </td>
-  </tr>
-</table>
+<div id="adsafe">
 
-<div id="tabs">
-  <ul>
-    <li><a href="#tab-filterlists"><span class="i18n_filter_lists"></span></a></li>
-    <li><a href="#tab-userfilters"><span class="i18n_add_your_own_filters"></span></a></li>
-    <li><a href="#tab-whitelisted"><span class="i18n_whitelisted_domains"></span></a></li>
-    <li><a href="#tab-general"><span class="i18n_general"></span></a></li>
-  </ul>
+  <!-- <table>
+    <tr>
+      <td style="padding-right: 8px; vertical-align: middle;">
+        <img src="icons/detailed/abp-32.png" srcset="icons/detailed/abp-64.png 2x">
+      </td>
+      <td>
+        <h1><span class="i18n_options"></span></h1>
+      </td>
+    </tr>
+  </table> -->
+  
+  <div class="adsafe-header">
+    <img src="skin/header-bg.png" alt="">
+  </div>
 
-  <div id="tab-filterlists">
-    <p>
-      <span class="i18n_enable_only_the"></span>
-    </p>
-    <p>
-      <span class="i18n_out_of_date_lists"></span>
-      <button id="updateFilterLists" class="refreshButton"><span class="i18n_update_now"></span></button><br />
+  <div id="tabs" class="ui-tabs-vertical ui-helper-clearfix">
+    <ul>
+      <li><a href="#tab-filterlists"><span class="i18n_filter_lists"></span></a></li>
+      <li><a href="#tab-userfilters"><span class="i18n_add_your_own_filters"></span></a></li>
+      <li><a href="#tab-whitelisted"><span class="i18n_whitelisted_domains"></span></a></li>
+      <li><a href="#tab-general"><span class="i18n_general"></span></a></li>
+    </ul>
 
-      <!-- Subscription entry template -->
-      <div id="subscriptionTemplate" class="subscription">
-        <button class="i18n_filters_subscription_delete_label subscriptionRemoveButton"></button>
-        <label class="subscriptionEnabledContainer">
-          <input class="subscriptionEnabled" type="checkbox" /> <span class="i18n_filters_subscription_enabled_label"></span>
-        </label>
-        <a class="subscriptionTitle"></a>
-        <span class="subscriptionUpdate"></span>
-      </div>
-
-      <!-- Placeholder for list of subscriptions -->
-      <div id="filterLists"></div>
-      <br />
-
-      <!-- Placeholder for user's filter list URLs -->
-      <div id="userFilterLists" style="margin-bottom: 8px"></div>
-
-      <p id="addSubscriptionButton">
-        <button id="startSubscriptionSelection" class="addButton"><span class="i18n_filters_addSubscription_label"></span></button>
+    <div id="tab-filterlists">
+      <p>
+        <span class="i18n_enable_only_the"></span>
       </p>
-      <div id="addSubscriptionContainer">
-        <span class="i18n_subscriptionSelection_subscriptionSelector_label"></span><br />
-        <select id="subscriptionSelector" style="width:500px"></select>
-        <button id="addSubscription" class="addButton"><span class="i18n_filters_addSubscriptionAdd_label"></span></button>
-      </div>
-      <div id="customSubscriptionContainer">
-        <p>
-          <span class="i18n_subscriptionSelection_title_label"></span><br />
-          <input type="text" id="customSubscriptionTitle" style="width:500px" />
+      <p>
+        <span class="i18n_out_of_date_lists"></span>
+        <button id="updateFilterLists" class="refreshButton"><span class="i18n_update_now"></span></button><br />
+
+        <!-- Subscription entry template -->
+        <div id="subscriptionTemplate" class="subscription">
+          <button class="i18n_filters_subscription_delete_label subscriptionRemoveButton"></button>
+          <label class="subscriptionEnabledContainer">
+            <input class="subscriptionEnabled" type="checkbox" /> <span class="i18n_filters_subscription_enabled_label"></span>
+          </label>
+          <a class="subscriptionTitle"></a>
+          <span class="subscriptionUpdate"></span>
+        </div>
+
+        <!-- Placeholder for list of subscriptions -->
+        <div id="filterLists"></div>
+        <br />
+
+        <!-- Placeholder for user's filter list URLs -->
+        <div id="userFilterLists" style="margin-bottom: 8px"></div>
+
+        <p id="addSubscriptionButton">
+          <button id="startSubscriptionSelection" class="addButton"><span class="i18n_filters_addSubscription_label"></span></button>
         </p>
-        <p>
-          <span class="i18n_subscriptionSelection_location_label"></span><br />
-          <input type="text" id="customSubscriptionLocation" style="width:500px" />
-        </p>
-      </div>
+        <div id="addSubscriptionContainer">
+          <span class="i18n_subscriptionSelection_subscriptionSelector_label"></span><br />
+          <select id="subscriptionSelector" style="width:500px"></select>
+          <button id="addSubscription" class="addButton"><span class="i18n_filters_addSubscriptionAdd_label"></span></button>
+        </div>
+        <div id="customSubscriptionContainer">
+          <p>
+            <span class="i18n_subscriptionSelection_title_label"></span><br />
+            <input type="text" id="customSubscriptionTitle" style="width:500px" />
+          </p>
+          <p>
+            <span class="i18n_subscriptionSelection_location_label"></span><br />
+            <input type="text" id="customSubscriptionLocation" style="width:500px" />
+          </p>
+        </div>
 
-      <div id="acceptableAdsContainer">
-        <input type="checkbox" id="acceptableAds" />
-        <label for="acceptableAds" class="i18n_filters_acceptableAds2_label"></label>
-        <a id="acceptableAdsLink" href="#" target="_blank" class="i18n_filters_viewList_label"></a>
-        <a id="acceptableAdsDocs" href="#" target="_blank" class="i18n_filters_readMore_label"></a>
-      </div>
-    </p>
+        <div id="acceptableAdsContainer">
+          <input type="checkbox" id="acceptableAds" />
+          <label for="acceptableAds" class="i18n_filters_acceptableAds2_label"></label>
+          <a id="acceptableAdsLink" href="#" target="_blank" class="i18n_filters_viewList_label"></a>
+          <a id="acceptableAdsDocs" href="#" target="_blank" class="i18n_filters_readMore_label"></a>
+        </div>
+      </p>
+    </div>
+
+    <div id="tab-whitelisted">
+      <p class="i18n_disabled_for_these_domains"></p>
+
+      <form id="whitelistForm" action="#">
+      <table>
+        <tr>
+          <td style="max-width:100%">
+            <input type="text" value="" id="newWhitelistDomain" style="width:100%">
+          </td>
+          <td>
+            <button class="addButton" type="submit"><span class="i18n_add_domain_button"></span></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <select id="excludedDomainsBox" size="10" multiple style="width:500px; background: white;"></select>
+          </td>
+          <td>
+            <button id="removeWhitelist" class="removeButton"><span class="i18n_remove_button"></span></button>
+          </td>
+        </tr>
+      </table>
+      </form>
+    </div>
+
+    <div id="tab-userfilters">
+      <p id="filter-must-follow-syntax" class="i18n_filter_must_follow_syntax"></p>
+
+      <form id="customFilterForm" action="#">
+      <table>
+        <tr>
+          <td>
+            <input type="text" value="" id="newFilter" style="width:500px">
+          </td>
+          <td>
+            <button class="addButton" type="submit"><span class="i18n_add_filter_button"></span></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select id="userFiltersBox" size="20" multiple style="width: 500px; background: white;overflow:auto;"></select>
+          </td>
+          <td>
+            <button id="removeCustomFilter" class="removeButton"><span class="i18n_remove_button"></span></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="font-size: 90%; text-align: right"><a id="rawFiltersButton" href="#"><span class="i18n_edit_filters_raw"></span></a></div>
+          </td>
+        </tr>
+        <tr id="rawFilters">
+          <td>
+            <div style="width: 500px">
+              <textarea id="rawFiltersText" style="width: 100%; height: 300px"></textarea>
+            </div>
+          </td>
+          <td>
+            <div><button id="importRawFilters"><span class="i18n_apply_changes"></span></button></div>
+          </td>
+        </tr>
+      </table>
+      </form>
+    </div>
+
+    <div id="tab-general">
+      <p>
+        <div id="shouldShowBlockElementMenuContainer">
+          <input type="checkbox" id="shouldShowBlockElementMenu" /><label for="shouldShowBlockElementMenu" class="i18n_show_block_element_menu"></label>
+        </div>
+        <div id="showDevtoolsPanelContainer">
+          <input type="checkbox" id="show_devtools_panel" /><label for="show_devtools_panel" class="i18n_show_devtools_panel"></label>
+        </div>
+        <div id="shouldShowNotificationsContainer" data-section="notifications">
+          <input type="checkbox" id="shouldShowNotifications" /><label for="shouldShowNotifications" class="i18n_overlay_shownotifications_label"></label>
+        </div>
+      </p>
+
+      <p id="found-a-bug" class="i18n_found_a_bug"></p>
+    </div>
   </div>
 
-  <div id="tab-whitelisted">
-    <p class="i18n_disabled_for_these_domains"></p>
-
-    <form id="whitelistForm" action="#">
-    <table>
-      <tr>
-        <td style="max-width:100%">
-          <input type="text" value="" id="newWhitelistDomain" style="width:100%">
-        </td>
-        <td>
-          <button class="addButton" type="submit"><span class="i18n_add_domain_button"></span></button>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <select id="excludedDomainsBox" size="10" multiple style="width:500px; background: white;"></select>
-        </td>
-        <td>
-          <button id="removeWhitelist" class="removeButton"><span class="i18n_remove_button"></span></button>
-        </td>
-      </tr>
-    </table>
-    </form>
-  </div>
-
-  <div id="tab-userfilters">
-    <p id="filter-must-follow-syntax" class="i18n_filter_must_follow_syntax"></p>
-
-    <form id="customFilterForm" action="#">
-    <table>
-      <tr>
-        <td>
-          <input type="text" value="" id="newFilter" style="width:500px">
-        </td>
-        <td>
-          <button class="addButton" type="submit"><span class="i18n_add_filter_button"></span></button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <select id="userFiltersBox" size="20" multiple style="width: 500px; background: white;overflow:auto;"></select>
-        </td>
-        <td>
-          <button id="removeCustomFilter" class="removeButton"><span class="i18n_remove_button"></span></button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div style="font-size: 90%; text-align: right"><a id="rawFiltersButton" href="#"><span class="i18n_edit_filters_raw"></span></a></div>
-        </td>
-      </tr>
-      <tr id="rawFilters">
-        <td>
-          <div style="width: 500px">
-            <textarea id="rawFiltersText" style="width: 100%; height: 300px"></textarea>
-          </div>
-        </td>
-        <td>
-          <div><button id="importRawFilters"><span class="i18n_apply_changes"></span></button></div>
-        </td>
-      </tr>
-    </table>
-    </form>
-  </div>
-
-  <div id="tab-general">
-    <p>
-      <div id="shouldShowBlockElementMenuContainer">
-        <input type="checkbox" id="shouldShowBlockElementMenu" /><label for="shouldShowBlockElementMenu" class="i18n_show_block_element_menu"></label>
-      </div>
-      <div id="showDevtoolsPanelContainer">
-        <input type="checkbox" id="show_devtools_panel" /><label for="show_devtools_panel" class="i18n_show_devtools_panel"></label>
-      </div>
-      <div id="shouldShowNotificationsContainer" data-section="notifications">
-        <input type="checkbox" id="shouldShowNotifications" /><label for="shouldShowNotifications" class="i18n_overlay_shownotifications_label"></label>
-      </div>
-    </p>
-
-    <p id="found-a-bug" class="i18n_found_a_bug"></p>
-  </div>
 </div>
-
 </body>
 </html>
