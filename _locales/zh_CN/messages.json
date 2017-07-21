@@ -27,13 +27,13 @@
     "message": "此消息框关闭后，请点击（或右击）网页上的一个元素。"
   },
   "description": {
-    "message": "Adblock Plus 已被超过 1 亿台设备使用，是世界上最受欢迎的广告拦截软件。"
+    "message": "净网大师已被超过 1 亿台设备使用，是世界上最受欢迎的广告拦截软件。"
   },
   "disabled_for_site": {
     "message": "对当前网站<strong>禁用</strong>"
   },
   "disabled_for_these_domains": {
-    "message": "Adblock Plus 将不过滤以下域名。您可以通过点击地址栏的 Adblock Plus 图标进行添加，也可在下面输入域名（非URL）然后点击“添加过滤规则”。"
+    "message": "净网大师将不过滤以下域名。您可以通过点击地址栏的 净网大师图标进行添加，也可在下面输入域名（非URL）然后点击“添加过滤规则”。"
   },
   "easy_create_filter": {
     "message": "拦截元素"
@@ -51,7 +51,7 @@
     "message": "过滤规则列表"
   },
   "filter_must_follow_syntax": {
-    "message": "您的过滤规则必须遵循 <a> Adblock Plus 过滤规则语法</a>。"
+    "message": "您的过滤规则必须遵循 <a> 净网大师过滤规则语法</a>。"
   },
   "filters_acceptableAds2_label": {
     "message": "允许一些非侵入式广告"
@@ -138,13 +138,13 @@
     "message": "隐秘浏览避开跟踪 - 摆脱广告公司跟踪你的一举一动。"
   },
   "firstRun_features": {
-    "message": "Adblock Plus 不仅仅能拦截广告"
+    "message": "净网大师不仅仅能拦截广告"
   },
   "firstRun_filterlistsReinitializedWarning": {
-    "message": "似乎因一个问题导致所有过滤规则已被删除，并且我们无法从备份中恢复。因此，我们不得不重置您的过滤规则和可接受广告设置。请在 <a>Adblock Plus 选项</a> 中检查您的过滤规则列表和可接受广告设置。"
+    "message": "似乎因一个问题导致所有过滤规则已被删除，并且我们无法从备份中恢复。因此，我们不得不重置您的过滤规则和可接受广告设置。请在 <a>净网大师选项</a> 中检查您的过滤规则列表和可接受广告设置。"
   },
   "firstRun_legacySafariWarning": {
-    "message": "Adblock Plus 不支持您正在使用的 Safari 旧版本。这可能导致无法正常工作，或者损害一些网站上的用户体验。我们强烈建议您更新到 Safari 6.1.1 或更高版本（基于 OS X 10.8 Mountain Lion），或 Safari 7.0.1 或更高版本（基于 OS X 10.9 Mavericks），或者使用 Mozilla Firefox、Google Chrome 或 Opera 浏览器的最新版本。"
+    "message": "净网大师不支持您正在使用的 Safari 旧版本。这可能导致无法正常工作，或者损害一些网站上的用户体验。我们强烈建议您更新到 Safari 6.1.1 或更高版本（基于 OS X 10.8 Mountain Lion），或 Safari 7.0.1 或更高版本（基于 OS X 10.9 Mavericks），或者使用 Mozilla Firefox、Google Chrome 或 Opera 浏览器的最新版本。"
   },
   "firstRun_share": {
     "message": "告诉你的朋友"
@@ -153,7 +153,7 @@
     "message": "<a>给我们一点支持</a>，让网络变得更加美好"
   },
   "firstRun_title": {
-    "message": "Adblock Plus 已安装"
+    "message": "净网大师已安装"
   },
   "firstRun_toggle_off": {
     "message": "关闭"
@@ -162,7 +162,7 @@
     "message": "开启"
   },
   "found_a_bug": {
-    "message": "发现漏洞？想要帮忙翻译Adblock Plus？请前往<a>此处询问</a>"
+    "message": "发现漏洞？想要帮忙翻译净网大师？请前往<a>此处询问</a>"
   },
   "general": {
     "message": "常规"
@@ -221,13 +221,13 @@
     }
   },
   "name": {
-    "message": "Adblock Plus"
+    "message": "净网大师"
   },
   "name_devbuild": {
-    "message": "Adblock Plus 开发版"
+    "message": "净网大师开发版"
   },
   "notification_antiadblock_message": {
-    "message": "此网站已知会对 Adblock Plus 用户显示针对性的信息。您想让 Adblock Plus 隐藏针对性的信息吗？"
+    "message": "此网站已知会对 净网大师用户显示针对性的信息。您想让 净网大师隐藏针对性的信息吗？"
   },
   "notification_antiadblock_title": {
     "message": "隐藏针对性的信息？"
@@ -275,7 +275,7 @@
     "message": "添加‘拦截元素’到右鍵菜单"
   },
   "show_devtools_panel": {
-    "message": "在开发者工具中显示 Adblock Plus 面板"
+    "message": "在开发者工具中显示 净网大师面板"
   },
   "stats_label_page": {
     "message": "此页上已拦截 <strong>$number$</strong> 次",
@@ -302,10 +302,10 @@
     }
   },
   "stats_share_download": {
-    "message": "下载 Adblock Plus"
+    "message": "下载 净网大师"
   },
   "stats_share_message": {
-    "message": "感谢Adblock Plus拦截了$number$个广告和跟踪行为。",
+    "message": "感谢净网大师拦截了$number$个广告和跟踪行为。",
     "placeholders": {
       "number": {
         "content": "$1"

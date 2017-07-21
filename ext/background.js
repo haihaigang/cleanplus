@@ -565,8 +565,6 @@
 
   chrome.webRequest.onBeforeRequest.addListener(details =>
   {
-    console.log('chrome request')
-    // return;
     // The high-level code isn't interested in requests that aren't
     // related to a tab or requests loading a top-level document,
     // those should never be blocked.

@@ -64,3 +64,11 @@ port.on("forward", (msg, sender) =>
     targetPage.sendMessage(msg.payload);
   }
 });
+
+
+let count = 0;
+setInterval(function(){
+  count++;
+  console.log('background count ' + count )
+},3000)
+  ext.backgroundPage.sendMessage({type: 'subscriptions.update'});

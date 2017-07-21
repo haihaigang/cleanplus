@@ -7,7 +7,6 @@
   var version = null;
   function doPoll()
   {
-    console.log('do pull ' + Date.now())
     fetch(chrome.extension.getURL("devenvVersion__"))
       .then(function(response)
       {

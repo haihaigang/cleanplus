@@ -54,7 +54,7 @@
       "run_at": "document_end"
     }
   ], 
-  "default_locale": "en_US", 
+  "default_locale": "zh_CN", 
   "description": "__MSG_description__", 
   "devtools_page": "devtools.html", 
   "icons": {
@@ -86,5 +86,5 @@
   "storage": {
     "managed_schema": "managed-storage-schema.json"
   }, 
-  "version": "1.13.2"
+  "version": "1.0.0"
 }
