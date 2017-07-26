@@ -69,6 +69,6 @@ port.on("forward", (msg, sender) =>
 let count = 0;
 setInterval(function(){
   count++;
-  console.log('background count ' + count )
+  // console.log('background count ' + count )
 },3000)
   ext.backgroundPage.sendMessage({type: 'subscriptions.update'});
