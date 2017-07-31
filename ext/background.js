@@ -601,11 +601,12 @@
 
     let filterResults = ext.webRequest.onBeforeRequest._dispatch(url, type, page, frame);
 
+    // l.qq.com/livemsg?*&ad_type=*&pf*$redirect=l.qq.com/livemsg?ty=web&ad_type=
     for(let res of filterResults)
     {
       if (res.type == 2)
       {
-        return {redirect_url: res.redirectUrl};
+        return {redirectUrl: res.redirectUrl.toLowerCase()};
       }
       else if (res.type == 1)
       {
